@@ -1,0 +1,41 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkarnats <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/11/20 10:32:51 by fkarnats          #+#    #+#             */
+/*   Updated: 2018/11/20 10:32:51 by fkarnats         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
+** This function compares lexicographically the given strings s1 and s2. If the
+** two strings are equal the function returns 1, otherwise it returns 0. We
+** do this using our previously made ft_strcmp function. The way to read what
+** is being returned is by thinking, if the result of ft_strcmp returns a number
+** greater than or less than 0 (meaning the strings are not equal) then return
+** 0, otherwise return 1 (meaning a 0 was returned from ft_strcmp and the
+** strings are equal).
+*/
+
+#include "libft.h"
+
+int			ft_strequ(char const *s1, char const *s2)
+{
+	if (!s1 || !s2)
+		return (-1);
+	return (ft_strcmp(s1, s2) ? 0 : 1);
+}
+
+/*
+** int main()
+** {
+** 	char s1[10] = "String 2.";
+** 	char s2[10] = "String 2.";
+** 	int result = ft_strequ(s1, s2);
+** 	printf("The result is %d\n", result);
+** 	return 0;
+** }
+*/
